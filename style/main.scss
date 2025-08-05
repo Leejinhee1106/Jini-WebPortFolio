@@ -119,12 +119,12 @@
                 margin-bottom: 20px;
 
                 .sec2_title {
-                    font-size: clamp(20px,2.5vw,32px);
+                    font-size: clamp(18px,2.5vw,32px);
                     margin-bottom: 20px;
                     color: 	#333333;
                 }
                 .sec2_sub {
-                    font-size: clamp(16px,2vw,18px); 
+                    font-size: clamp(14px,2vw,18px); 
                     color: #333;
                 }
                 .sec2_linktext{
@@ -161,12 +161,11 @@
 
                 .sec3_imgbox {
                     .sec3_img{
-                        min-width: 400px;                /* 부모 요소 기준으로 반응형 */
-                        max-width: 460px;           /* 원본 너비 기준 최대 제한 */
+                        min-width: 400px;          
+                        max-width: 460px;           
                         aspect-ratio: 46 / 53;
                         background: url(../img/ljh/ljh.png) no-repeat center;
                         border-radius: 0 100px 0 100px;
-                        // background: url(../img/ljh.png) no-repeat center;
                         background-size: cover;
                     }
                 }
@@ -177,7 +176,7 @@
                         height: 75px;
                         text-align: center;
                         color: #333;
-                        font-size: clamp(18px,2vw,24px);
+                        font-size: clamp(16px,2vw,24px);
                         font-weight: 500;
                         line-height: 40px;
                         margin-bottom: 30px;
@@ -349,7 +348,6 @@
         width: 80%;
         padding-top: 80px;
         margin: 0 auto;
-
             .sec5_title {
                 font-size: 32px;
                 margin: 20px 0;
