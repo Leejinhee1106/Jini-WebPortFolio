@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Sarabun:wght@400;700&display=swap');
+
+//영어용
+@font-face {
+    font-family: 'PyeojinGothic';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2504-1@1.0/PyeojinGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+//한글용
+@font-face {
+    font-family: 'Paperlogy 3';
+    src: url('Paperlogy-3Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy 4';
+    src: url('Paperlogy-4Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy 5';
+    src: url('./fonts/Paperlogy-5Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Paperlogy 6';
+    src: url('./fonts/Paperlogy-6SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy 7';
+    src: url('./fonts/Paperlogy-7Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paperlogy 8';
+    src: url('./fonts/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+/* 기본 본문용 */
+body {
+font-family: 'Paperlogy 5'; 
+line-height: 1.6;
+}
+
+/* 아주 두껍게 */
+.font_xb {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 800; 
+}
+
+/* 중간 굵기 */
+.font_b {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 700; 
+}
+
+.font_sb {
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 600; 
+}
+
+// 한글용
+
+.font_csseb {
+  font-family: 'Paperlogy 8';
+}
+
+.font_cssb {
+  font-family: 'Paperlogy 7';
+}
+
+.font_csssb {
+  font-family: 'Paperlogy 6';
+}
+
+.font_cssm {
+  font-family: 'Paperlogy 5';
+}
+
+.font_cssr {
+  font-family: 'Paperlogy 4';
+}
+
+// ********************************************************************************
+
+html {scroll-behavior: smooth;}
+
+*{margin: 0; padding: 0;}
+
+li {list-style: none;}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+::selection {
+  background-color: #6A8A6F; /* 배경색 (드래그한 영역의 색) */
+  color: #fff; /* 글자 색 */
+}
