@@ -1,4 +1,5 @@
 @import 'settings';
+@import 'media';
 
 /* 헤더 & 네비 */
 header {
@@ -32,6 +33,13 @@ header {
                 // font-weight: bold;
             }   
         }
+    }
+    .nav-icon {
+        width: 52px;
+        height: 50px;
+        background: url(../img/nav-btn/sidenav-btn.png);
+        margin-right: 10px;
+        display: none;
     }
 }
 
@@ -70,8 +78,7 @@ header {
                     background-color: #CBE0B9;
                     color: #34633a;
                 }
-            }
-            
+            }  
         }
     }
 

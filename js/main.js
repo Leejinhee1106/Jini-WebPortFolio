@@ -1,5 +1,4 @@
-
-//swiper
+// swiper
 const swiper = new Swiper('.mySwiper', {
   loop: true,
   slidesPerView: 9,
@@ -11,7 +10,7 @@ const swiper = new Swiper('.mySwiper', {
   },
 });
 
-//skill 탭박스
+// skill 탭박스
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -31,8 +30,9 @@ tabBtns.forEach(btn => {
   });
 });
 
-// 콘택트 섹션
+// 콘택트 섹션 + 모바일 메뉴 toggle 기능
 document.addEventListener("DOMContentLoaded", () => {
+  // IntersectionObserver
   const emailElement = document.querySelector('.animated-email');
   const textBoxElement = document.querySelector('.sec6_maintext');
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
           if (entry.target.classList.contains('sec6_maintext')) {
             entry.target.classList.add('active');
           }
-          observer.unobserve(entry.target); // 한 번만 실행
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -55,6 +55,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (emailElement) observer.observe(emailElement);
   if (textBoxElement) observer.observe(textBoxElement);
+
+  // ✅ 사이드 메뉴 토글 기능 추가
+  const navIcon = document.querySelector('.nav-icon');
+  const navbar = document.querySelector('.navbar');
+
+  if (navIcon && navbar) {
+    navIcon.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  }
 });
-
-

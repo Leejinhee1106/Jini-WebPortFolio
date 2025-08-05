@@ -1,4 +1,5 @@
 @import 'settings';
+@import 'media';
 
 // 배경색 #CBE0B9 
 // 진한배경 #7C9473 / #6A8A6F 
@@ -48,6 +49,13 @@
                 }   
             }
         }
+        .nav-icon {
+            width: 52px;
+            height: 50px;
+            background: url(../img/nav-btn/sidenav-btn.png);
+            margin-right: 10px;
+            display: none;
+        }
     }
 
   /* 메인 내용 */
@@ -64,14 +72,22 @@
             align-items: center;
             justify-content: space-around;
 
-            .sec1_title {font-size: 64px; color: #333;}
-            .sec1_subtext {font-size: 20px; margin-top: 10px;}
-            .sec1_img{
-                width: 800px;
-                height: 800px;
-                background: url(../img/ljh/main_tree.png) center center;
+            .sec1_title {
+                font-size: clamp(32px,6vw,64px); 
+                color: #333;
+            }
+            .sec1_subtext {
+                font-size: clamp(11px,3.5vw,20px); 
+                margin-top: 10px;
+            }
+            .sec1_img {
+                width: 50vw;    
+                max-width: 800px;
+                min-width: 450px;    
+                height: auto;    
+                aspect-ratio: 1 / 1; 
+                background: url(../img/ljh/main_tree.png) center center no-repeat;
                 background-size: cover;
-                // filter: opacity(.9);
             }
 
             /*섹션 간 간격 배경색 #CBE0B9 살구색 #ffe4ce 진한배경 #7C9473 차콜 #36454F*/
@@ -83,13 +99,15 @@
             height: 400px;
             background-color: #CBE0B9;
             display: flex;
-            justify-content: center;   // 전체 가운데 정렬
+            justify-content: center;
+            gap: 200px;   // 전체 가운데 정렬
             align-items: flex-end;     // 수직 하단 정렬
-            gap: 200px;   
 
             .sec2_img{
-                width: 600px;
-                height: 550px;
+                width: 40vw;         
+                max-width: 600px; 
+                min-width: 300px;       
+                aspect-ratio: 12 / 11;
                 background: url(../img/sec2_img1.png) no-repeat;
                 background-size: cover;  
             }
@@ -101,11 +119,14 @@
                 margin-bottom: 20px;
 
                 .sec2_title {
-                    font-size: 32px;
+                    font-size: clamp(20px,2.5vw,32px);
                     margin-bottom: 20px;
                     color: 	#333333;
                 }
-                .sec2_sub {font-size: 18px; color: #333;}
+                .sec2_sub {
+                    font-size: clamp(16px,2vw,18px); 
+                    color: #333;
+                }
                 .sec2_linktext{
                     margin-top: 20px;
                     width: 130px;
@@ -120,15 +141,13 @@
                     }
                 }
             }
-            /*섹션 간 간격*/
-            margin-bottom: 200px;
         }
 
         #sec3 {
             width: 80%;
-            height: 80vh;
             padding-top: 100px;
             margin: 0 auto;
+            margin-bottom: 50px !important;
             .sec3_title {
                 margin-bottom: 50px;
                 font-size: 32px;
@@ -137,14 +156,14 @@
             .sec3_box {
                 width: 100%;
                 display: flex;
+                gap: 10px;
                 justify-content: space-around;  
 
                 .sec3_imgbox {
-                    width: 30%;
-                    height: 550px;
                     .sec3_img{
-                        width: 100%;
-                        height: 530px;
+                        min-width: 400px;                /* 부모 요소 기준으로 반응형 */
+                        max-width: 460px;           /* 원본 너비 기준 최대 제한 */
+                        aspect-ratio: 46 / 53;
                         background: url(../img/ljh/ljh.png) no-repeat center;
                         border-radius: 0 100px 0 100px;
                         // background: url(../img/ljh.png) no-repeat center;
@@ -158,7 +177,7 @@
                         height: 75px;
                         text-align: center;
                         color: #333;
-                        font-size: 24px;
+                        font-size: clamp(18px,2vw,24px);
                         font-weight: 500;
                         line-height: 40px;
                         margin-bottom: 30px;
@@ -170,13 +189,13 @@
                         gap: 30px 0;
                         .flex {
                             width: 48%;
-                            height: 200px; 
+                            min-height: 200px; 
                             border-radius: 20px;
                             line-height: 40px;
                             box-sizing: border-box;
                             padding: 15px 20px 20px 20px;
-                            font-size: 16px;
-                            .sec3_text{font-size: 15px !important;}
+                            font-size: clamp(12px,2vw,16px);
+                            .sec3_text{font-size: clamp(14px,1vw,15px) !important;}
                         }
                         .sec3_pro{   
                             // background: #96b38c;
@@ -203,8 +222,9 @@
         #sec4 {
             width: 80%;
             margin: 0 auto;
+
             .sec4_title {
-                margin-bottom: 100px;
+                margin-bottom: 50px;
                 font-size: 32px;
                 color: #333;
             }
@@ -334,80 +354,92 @@
                 font-size: 32px;
                 margin: 20px 0;
             }
-
             .sec5_boxes {
-                width: 100%;
-                height: 500px;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                margin-top: 50px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
 
                 .sec5_box {
-                width: 25%;
-                height: 500px;
-                padding: 20px 5px;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                background-color: #CBE0B9;
-                border-radius: 0 30px 0 30px;
+                    width: 23%;
+                    min-width: 260px;
+                    height: 500px;
+                    padding: 20px 5px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    background-color: #CBE0B9;
+                    border-radius: 0 30px 0 30px;
+                    transition: all 0.3s ease;
 
                     .sec5_image-wrapper {
-                        width: 90%;
-                        margin: 0 auto;
-                        height: 400px;
-                        overflow: hidden;
-                        position: relative;
+                    width: 90%;
+                    margin: 0 auto;
+                    aspect-ratio: 4 / 6;
+                    overflow: hidden;
+                    position: relative;
 
-                        img {
-                        height: auto;
+                    img {
                         width: 100%;
+                        height: auto;
+                        object-fit: cover;
                         transition: transform 1s ease-in;
-                        }
-
-                        // &:hover img {
-                        // transform: translateY(-40%);
-                        // }
-                        &:hover .antenna_page {
-                        transform: translateY(-20%);
-                        }
-                        &:hover .meedream_page {
-                        transform: translateY(-55%);
-                        }
-                        &:hover .bm_page {
-                        transform: translateY(-70%);
-                        }
-
                     }
+
+                    &:hover .antenna_page {
+                        transform: translateY(-20%);
+                    }
+                    &:hover .meedream_page {
+                        transform: translateY(-55%);
+                    }
+                    &:hover .bm_page {
+                        transform: translateY(-70%);
+                    }
+                    }
+
                     .sec5_text-wrapper {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-items: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3px;
+
                         .box_text {
-                        color: #1F1F1F;
-                        font-size: 20px;
+                            color: #1F1F1F;
+                            font-size: clamp(16px, 2vw, 20px);
+                            text-align: center;
                         }
-                        .box_subtext {color: #555;}
-                        .box_page > a{color: #496B3B; font-weight: 600;}
+                        .box_subtext {
+                            color: #555;
+                            font-size: clamp(14px, 1.5vw, 16px);
+                        }
+                        .box_page > a {
+                            color: #496B3B;
+                            font-weight: 600;
+                        }
                     }
                 }
-                .sec5_link {
-                    width: 10%;
-                    a{ 
+            }
+            // 뷰 모얼 버튼
+            .sec5_link {
+                    width: 180px;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    a{  
+                        width: 100%;
+                        height: 100%;
                         color: #1E2D3A;
                         border: 2px solid #CBE0B9;
                         padding: 10px;
                         text-align: center;
                         border-radius: 20px;
-                        transition: all 0.2s;
+                        transition: all 0.2s;  
                     }
                     a:hover {
                         background-color: #CBE0B9;
                     }
                 }
-            }
         }
 
         #sec6 {
@@ -430,7 +462,7 @@
                 justify-content: center;
                 gap: 100px;
                 .sec6_maintext{
-                    font-size: 64px;
+                    font-size: clamp(32px, 5vw, 64px);
                     color: #333;
                     .text-green{color: #89bb92;}
                     b {display: inline-block;}
@@ -464,7 +496,7 @@
                 .sec6_subtext{
                     text-align: center;
                     .sec6_email {
-                        font-size: 90px;
+                        font-size: clamp(40px, 7vw, 90px);
                         letter-spacing: 1px;
                         font-weight: bolder;
                         color: #89bb92;
@@ -520,7 +552,7 @@
                     }
                 }
                 .sec6_text {
-                    font-size: 24px;
+                    font-size: clamp(20px, 1.5vw, 24px);
                     font-weight: 500;
                     color: #333;
                     margin-bottom: 20px;
