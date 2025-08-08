@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>이진희 | 웹포트폴리오</title>  
   <!-- 기존 커스텀 스타일 -->
-  <link rel="stylesheet" href="./style/project2.css" />
-  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./style/project2.css" />
   <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta name="theme-color" content="#ffffff" />
@@ -312,29 +312,38 @@
 
     <section id="project_sec2" class="pro_sec">
         <h1 class="pro_title font_b">Banner Design</h1>
-        <!-- Slider main container -->
-        <div class="swiper banner-swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper banner-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide banner_img banner_img1"></div>
-                <div class="swiper-slide banner_img banner_img2"></div>
-                <div class="swiper-slide banner_img banner_img3"></div>
+        <!-- 캐러셀 배너 슬라이더 -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/banner/mbanner.png" class="d-block w-100" alt="맥도날드">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/banner/megabanner.png" class="d-block w-100" alt="메가수박주스">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/banner/jubanner.png" class="d-block w-100" alt="쥬씨메인배너">
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev banner-button"></div>
-            <div class="swiper-button-next banner-button"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
+
+
     <!-- 카드뉴스 -->
     <section id="project_sec3" class="pro_sec">
         <h1 class="pro_title font_b">Card News</h1>
         
-        <div class="card-swiper-container" style="position: relative;">
+       <div class="card-swiper-container">
             <div class="swiper card-swiper">
-                <div class="swiper-wrapper card-wrapper">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide card_img card_img1"></div>
                     <div class="swiper-slide card_img card_img2"></div>
                     <div class="swiper-slide card_img card_img3"></div>
@@ -345,14 +354,19 @@
                     <div class="swiper-slide card_img card_img8"></div>
                 </div>
             </div>
-            <!-- 버튼을 swiper 바깥으로 빼고 absolute 위치 지정 -->
-            <div class="swiper-button-prev card-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%); z-index: 10;"></div>
-            <div class="swiper-button-next card-button" style="position: absolute; right: -40px; top: 50%; transform: translateY(-50%); z-index: 10;"></div>
+
+            <div class="swiper-button-prev card-button-prev"></div>
+            <div class="swiper-button-next card-button-next"></div>
         </div>
+
         <div class="card_textbox">
             <p class="card_text1">예비고양이 집사들을 위한 가이드 카드뉴스</p>
-                <p class="card_tool">Illustrator · Photoshop</p>
-                <p class="card_text2 font_sb"><a href="https://leejinhee1106.github.io/CardNews/">View More</a></p>
+            <p class="card_tool">Illustrator · Photoshop</p>
+            <p class="card_text2 font_sb">
+                <a href="https://leejinhee1106.github.io/CardNews/" target="_blank">
+                    View More
+                </a>
+            </p>
         </div>
     </section>
     <section id="project_sec4" class="pro_sec">
@@ -368,8 +382,13 @@
                     <div class="videodesc_detail">
                     기여도 20% [5인1조]<br>
                     이상한나라의 솜사탕 파트
+                    <!-- https://youtu.be/OQzop0rMSW0 -->
                     </div>
-                    <div class="videodesc_link"><a href="https://leejinhee1106.github.io/motion_beskin/" class="font_sb">View More</a></div>
+                    <div class="videodesc_link">
+                        <a href="https://leejinhee1106.github.io/motion_beskin/" target="_blank" class="font_sb">
+                            View More
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="video">
@@ -385,15 +404,33 @@
                         기여도 25% [4인1조]<br>
                         파트1 - 하이라이트 44초-51초<br>
                         파트2 - 후렴구 1:08초-끝
+                        <!-- https://youtu.be/6geSKWmkaCI -->
+                    </div>
+                </div>
+            </div>
+            <div class="video">
+                <div class="pro_video">
+                    <video src="./img/mp4/ATTITUDE.mp4" controls></video>
+                </div>
+                <div class="pro_videodesc">
+                    <div class="videodesc_title">식품안전나라 공모전 UCC</div>
+                    <div class="videodesc_subtitle">
+                        Graphics | Ps · Ai · Ae <br>
+                    </div>
+                    <div class="videodesc_detail">
+                        기여도 25% [4인1조]<br>
+                        3등분 장면 연결<br>
+                        <!-- https://youtu.be/MtsBwZF7E60 -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</div>   <!-- 섹션+섹션네비까지 워랩 --> 
+</div>  
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/slider.js"></script>
+<script src="./js/swiper.js"></script>
 <script src="./js/tap.js"></script>
 </body>
 </html>

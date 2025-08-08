@@ -424,10 +424,10 @@ header .nav-icon {
 }
 
 .project-wrap {
-  margin: 0 10%;
   padding-top: 80px;
   width: 80%;
-  max-width: 1600px;
+  max-width: 1400px;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 .project-wrap .pro_sec {
@@ -594,130 +594,98 @@ header .nav-icon {
 .project-wrap .pub_color8 {
   background-color: #016ED5;
 }
-.project-wrap #project_sec2 {
-  width: 100%;
-}
-.project-wrap #project_sec2 .banner-swiper {
-  width: 100%;
-}
-.project-wrap #project_sec2 .banner-swiper .banner-wrapper {
-  height: 400px;
-}
-.project-wrap #project_sec2 .banner-swiper .banner-wrapper .banner_img {
-  height: 400px;
-  background-color: rgba(203, 224, 185, 0.5);
-}
-.project-wrap #project_sec2 .banner-swiper .banner-button {
-  color: #fff;
-}
-.project-wrap .banner_img1 {
+.project-wrap #project_sec2 .banner_img1 {
   background: url(../img/banner/mbanner.png) no-repeat center;
   background-size: cover;
 }
-.project-wrap .banner_img2 {
+.project-wrap #project_sec2 .banner_img2 {
   background: url(../img/banner/megabanner.png) no-repeat center;
   background-size: cover;
 }
-.project-wrap .banner_img3 {
+.project-wrap #project_sec2 .banner_img3 {
   background: url(../img/banner/jubanner.png) no-repeat center;
   background-size: cover;
 }
-.project-wrap #project_sec3 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper {
   width: 100%;
-  height: auto;
-}
-.project-wrap #project_sec3 .card-swiper {
-  width: 100%;
-  height: auto;
-  position: relative;
   /* 배경 이미지 클래스 예시 */
 }
-.project-wrap #project_sec3 .card-swiper .swiper-slide {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
-  flex-shrink: 0;
 }
-.project-wrap #project_sec3 .card-swiper .card-wrapper {
-  position: relative;
-  right: 20px;
-  padding: 20px;
-}
-.project-wrap #project_sec3 .card-swiper .card-wrapper .card_img {
-  width: 100%; /* 부모 슬라이드에 맞춤 */
-  max-width: 360px; /* 데스크탑용 제한 */
-  min-width: 250px; /* 데스크탑용 최소 제한 */
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img {
+  width: 100%;
   aspect-ratio: 1/1;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
 }
-@media (max-width: 768px) {
-  .project-wrap #project_sec3 .card-swiper .card-wrapper .card_img {
-    max-width: none !important;
-    min-width: 0 !important;
-    width: 100% !important;
-  }
-}
-.project-wrap #project_sec3 .card-swiper .card_img1 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img1 {
   background-image: url("../img/card/card_1.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img2 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img2 {
   background-image: url("../img/card/card_2.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img3 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img3 {
   background-image: url("../img/card/card_3.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img4 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img4 {
   background-image: url("../img/card/card_4.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img5 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img5 {
   background-image: url("../img/card/card_5.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img6 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img6 {
   background-image: url("../img/card/card_6.jpg");
 }
-.project-wrap #project_sec3 .card-swiper .card_img7 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img7 {
   background-image: url("../img/card/card_7.png");
 }
-.project-wrap #project_sec3 .card-swiper .card_img8 {
+.project-wrap #project_sec3 .card-swiper-container .card-swiper .card_img8 {
   background-image: url("../img/card/card_8.jpg");
 }
-.project-wrap #project_sec3 .card-button {
-  color: #34633a;
+@media (max-width: 768px) {
+  .project-wrap #project_sec3 .card-swiper-container .swiper-slide {
+    width: 100% !important; /* 화면 폭 전부 사용 */
+  }
+  .project-wrap #project_sec3 .card-swiper-container .card_img {
+    max-width: none !important;
+    min-width: 0 !important;
+  }
 }
 .project-wrap #project_sec3 .card_textbox {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  width: 440px;
-  height: 100px;
-  justify-content: center;
+  width: auto;
+  height: auto;
+  line-height: clamp(10px, 1.5vw, 20px);
 }
 .project-wrap #project_sec3 .card_textbox .card_text1 {
-  font-size: 24px;
+  font-size: clamp(16px, 3vw, 24px); /* 최소 16px, 뷰포트 2%, 최대 24px */
   color: #222;
   font-weight: 600;
 }
 .project-wrap #project_sec3 .card_textbox .card_tool {
-  font-size: 20px;
+  font-size: clamp(14px, 2vw, 20px); /* 최소 14px, 최대 20px */
   color: #555;
 }
 .project-wrap #project_sec3 .card_textbox .card_text2 {
-  width: 130px;
-  height: 40px;
+  width: clamp(90px, 10vw, 130px); /* 최소 90px, 최대 130px */
+  height: clamp(32px, 3vw, 40px); /* 최소 32px, 최대 40px */
   margin-top: 5px;
 }
 .project-wrap #project_sec3 .card_textbox .card_text2 > a {
   background: rgba(52, 99, 58, 0.9);
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(14px, 1.5vw, 18px); /* 최소 14px, 최대 18px */
   text-align: center;
-  padding: 10px;
+  padding: clamp(8px, 1vw, 10px);
   box-sizing: border-box;
-  line-height: 20px;
+  line-height: 1.2;
   border-radius: 10px;
   transition: all 0.3s;
 }

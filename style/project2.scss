@@ -47,10 +47,10 @@ header {
 // 서브사이트 메인콘텐츠 워랩
 
 .project-wrap {
-    margin: 0 10%;
     padding-top: 80px; //헤더 높이
     width: 80%;
-    max-width: 1600px;
+    max-width: 1400px;
+    margin: 0 auto;
     box-sizing: border-box;
     .pro_sec {
         margin-bottom: 100px;
@@ -200,120 +200,121 @@ header {
     .pub_color6 {background-color: #D62300;} //버거킹2
     .pub_color7 {background-color: #FF3B19;} //버거킹3
     .pub_color8 {background-color: #016ED5;} //라라스윗
-    #project_sec2 { 
-    width: 100%;  
-        .banner-swiper {
-            width: 100%;
-            .banner-wrapper {
-                height: 400px;
-                .banner_img {
-                   height: 400px;
-                   background-color: rgba(203, 224, 185,.5);
-                }
-            }
-            .banner-button {color: #fff;}
+
+
+
+
+
+
+
+    #project_sec2 {
+        .banner_img1 {
+            background: url(../img/banner/mbanner.png) no-repeat center;
+            background-size: cover;
+        }
+        .banner_img2 {
+            background: url(../img/banner/megabanner.png) no-repeat center;
+            background-size: cover;
+        }
+        .banner_img3 {
+            background: url(../img/banner/jubanner.png) no-repeat center;
+            background-size: cover;
         }
     }
-    .banner_img1 {
-        background: url(../img/banner/mbanner.png) no-repeat center;
-        background-size: cover;
-    }
-    .banner_img2 {
-        background: url(../img/banner/megabanner.png) no-repeat center;
-        background-size: cover;
-    }
-    .banner_img3 {
-        background: url(../img/banner/jubanner.png) no-repeat center;
-        background-size: cover;
-    }
+
+    
+
+
+
+
+
     #project_sec3 {
-    width: 100%;
-    height: auto;
-        .card-swiper {
-            width: 100%;
-            height: auto;
-            position: relative;
-            .swiper-slide {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: auto;
-                flex-shrink: 0;
-            }
-            .card-wrapper{
-                position: relative;
-                right: 20px;
-                padding: 20px;
+        .card-swiper-container {
+            .card-swiper {
+                width: 100%;
+                .swiper-slide {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: auto;
+                }
                 .card_img {
-                    width: 100%;               /* 부모 슬라이드에 맞춤 */
-                    max-width: 360px;          /* 데스크탑용 제한 */
-                    min-width: 250px;          /* 데스크탑용 최소 제한 */
+                    width: 100%;
                     aspect-ratio: 1 / 1;
                     background-size: cover;
                     background-position: center;
                     border-radius: 8px;
                 }
+                 /* 배경 이미지 클래스 예시 */
+                .card_img1 { background-image: url('../img/card/card_1.jpg'); }
+                .card_img2 { background-image: url('../img/card/card_2.jpg'); }
+                .card_img3 { background-image: url('../img/card/card_3.jpg'); }
+                .card_img4 { background-image: url('../img/card/card_4.jpg'); }
+                .card_img5 { background-image: url('../img/card/card_5.jpg'); }
+                .card_img6 { background-image: url('../img/card/card_6.jpg'); }
+                .card_img7 { background-image: url('../img/card/card_7.png'); }
+                .card_img8 { background-image: url('../img/card/card_8.jpg'); }
+            }
 
-                @media (max-width: 768px) {
-                    .card_img {
-                        max-width: none !important;
-                        min-width: 0 !important;
-                        width: 100% !important;
-                    }
+            @media (max-width: 768px) {
+                .swiper-slide {
+                    width: 100% !important; /* 화면 폭 전부 사용 */
                 }
-            }   
-            
-            /* 배경 이미지 클래스 예시 */
-            .card_img1 { background-image: url('../img/card/card_1.jpg'); }
-            .card_img2 { background-image: url('../img/card/card_2.jpg'); }
-            .card_img3 { background-image: url('../img/card/card_3.jpg'); }
-            .card_img4 { background-image: url('../img/card/card_4.jpg'); }
-            .card_img5 { background-image: url('../img/card/card_5.jpg'); }
-            .card_img6 { background-image: url('../img/card/card_6.jpg'); }
-            .card_img7 { background-image: url('../img/card/card_7.png'); }
-            .card_img8 { background-image: url('../img/card/card_8.jpg'); }
+                .card_img {
+                    max-width: none !important;
+                    min-width: 0 !important;
+                }
+            }
         }
-        .card-button{color: #34633a;}
+  
         .card_textbox{
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
-            width: 440px;
-            height: 100px;
-            justify-content: center;
+            width: auto;
+            height: auto;
+            line-height: clamp(10px, 1.5vw, 20px);
+            
             .card_text1 {
-                font-size: 24px; 
-                color: #222;
-                font-weight: 600;
+            font-size: clamp(16px, 3vw, 24px); /* 최소 16px, 뷰포트 2%, 최대 24px */
+            color: #222;
+            font-weight: 600;
             }
+
             .card_tool {
-                font-size: 20px; 
-                color: #555;
+            font-size: clamp(14px, 2vw, 20px); /* 최소 14px, 최대 20px */
+            color: #555;
             }
-            .card_text2{ 
-                width: 130px;
-                height: 40px;
-                margin-top: 5px;
-                > a{                    
-                background:  rgba(52, 99, 58, 0.9);
+
+            .card_text2 {
+            width: clamp(90px, 10vw, 130px);  /* 최소 90px, 최대 130px */
+            height: clamp(32px, 3vw, 40px);  /* 최소 32px, 최대 40px */
+            margin-top: 5px;
+
+            > a {
+                background: rgba(52, 99, 58, 0.9);
                 color: #fff;
-                font-size: 18px;
+                font-size: clamp(14px, 1.5vw, 18px); /* 최소 14px, 최대 18px */
                 text-align: center;
-                padding: 10px;
+                padding: clamp(8px, 1vw, 10px);
                 box-sizing: border-box;
-                line-height: 20px; 
-                border-radius: 10px;      
-                transition: all 0.3s;          
-                }
-                > a:hover {
-                background-color: #CBE0B9;                  
-                color: #333;      
-                box-shadow: 0px 1px 3px #c7c7c7;    
-                }
+                line-height: 1.2;
+                border-radius: 10px;
+                transition: all 0.3s;
+            }
+
+            > a:hover {
+                background-color: #CBE0B9;
+                color: #333;
+                box-shadow: 0px 1px 3px #c7c7c7;
+            }
             }
         }
     }
+    
+
+        
+
     #project_sec4 {
         width: 100%;
             .pro_videobox {
