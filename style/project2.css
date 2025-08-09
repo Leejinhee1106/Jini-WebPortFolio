@@ -193,6 +193,11 @@ a {
     min-width: 300px !important;
   }
 }
+@media (max-width: 320px) {
+  #sec1 .sec1_title {
+    font-size: 30px !important;
+  }
+}
 @media (max-width: 1024px) {
   #sec2 {
     gap: 50px !important;
@@ -373,7 +378,6 @@ a {
     font-size: 24px;
   }
 }
-.sec1_title,
 .sec2_title,
 .sec3_title,
 .sec4_title,
