@@ -441,6 +441,7 @@ header .nav-icon {
 .project-wrap #project_sec1 {
   width: 100%;
   margin-top: 50px;
+  /* 섹션1 반응형 */
 }
 .project-wrap #project_sec1 .tab-menu {
   display: flex;
@@ -456,11 +457,12 @@ header .nav-icon {
   padding: 6px 16px;
   cursor: pointer;
   font-weight: bold;
+  font-size: clamp(14px, 1.4vw, 16px);
   transition: all 0.3s ease;
 }
 .project-wrap #project_sec1 .tab-menu li.active {
   background-color: rgba(106, 138, 111, 0.7);
-  font-weight: lighter;
+  font-weight: 500;
   color: #fff;
   border-radius: 5px;
 }
@@ -475,6 +477,9 @@ header .nav-icon {
   height: 400px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
   box-sizing: border-box;
   border: 1px solid #CBE0B9;
   border-radius: 20px;
@@ -488,18 +493,47 @@ header .nav-icon {
   align-items: center;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .publeft .pub_img {
-  width: 500px;
-  height: 300px;
+  width: min(500px, 90%);
+  aspect-ratio: 16/9;
+  background: #eee;
+  border-radius: 10px;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .an_mockup {
+  background: url(../img/publishing/media-antenna.png) center center;
+  background-size: cover;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .mea_mockup {
+  background: url(../img/publishing/media-medream.png) center center;
+  background-size: cover;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .bm_mockup {
+  background: url(../img/publishing/media-bm.png) center center;
+  background-size: cover;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .ju_mockup {
+  background: url(../img/publishing/media-juicy.png) center center;
+  background-size: cover;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .king_mockup {
+  background: url(../img/publishing/media-king.png) center center;
+  background-size: cover;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .publeft .lala_mockup {
+  background: url(../img/publishing/media-lalasweet.png) center center;
+  background-size: cover;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .publeft .pub_textbox {
   text-align: center;
+  margin-top: 10px;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .publeft .pub_textbox .pub_title {
-  font-size: 20px;
+  font-size: clamp(18px, 2vw, 20px);
   color: #222;
+  line-height: 1.3;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .publeft .pub_textbox .pub_subtext {
-  font-size: 16px;
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #555;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright {
   width: 45%;
@@ -514,9 +548,13 @@ header .nav-icon {
   gap: 20px;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_concept {
-  font-size: 24px;
+  font-size: clamp(18px, 2.2vw, 24px);
   letter-spacing: 1.5px;
   color: #182e1a;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_fc {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #333;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_fc .pub_color {
   display: inline-block;
@@ -525,50 +563,62 @@ header .nav-icon {
   border-radius: 30%;
   margin-left: 5px;
 }
+.project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_desc {
+  font-size: clamp(14px, 1.6vw, 16px);
+  color: #333;
+}
+.project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_desc.text-gray {
+  color: #7c7c7c;
+}
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_desc a {
-  font-size: 24px;
+  font-size: clamp(16px, 2vw, 24px);
   color: #182e1a;
   text-align: center;
+  transition: color 0.2s;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .pubr_desc a:hover {
   color: #6A8A6F;
-}
-.project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .text-gray {
-  color: #7c7c7c;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .site-link {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
 }
 .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text .site-link > .github img {
   width: 50px;
   height: 50px;
 }
-.project-wrap .an_mockup {
-  background: url(../img/publishing/media-antenna.png) center center;
-  background-size: cover;
+@media (max-width: 1024px) {
+  .project-wrap #project_sec1 .tab-content .pubbox {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .project-wrap #project_sec1 .tab-content .pubbox .publeft,
+  .project-wrap #project_sec1 .tab-content .pubbox .pubright {
+    width: 100%;
+    height: auto;
+  }
+  .project-wrap #project_sec1 .tab-content .pubbox .pubright .pubr_text {
+    align-items: center;
+  }
+  .project-wrap #project_sec1 .tab-content .pubbox .site-link {
+    justify-content: center;
+    gap: 16px;
+  }
 }
-.project-wrap .mea_mockup {
-  background: url(../img/publishing/media-medream.png) center center;
-  background-size: cover;
-}
-.project-wrap .bm_mockup {
-  background: url(../img/publishing/media-bm.png) center center;
-  background-size: cover;
-}
-.project-wrap .ju_mockup {
-  background: url(../img/publishing/media-juicy.png) center center;
-  background-size: cover;
-}
-.project-wrap .king_mockup {
-  background: url(../img/publishing/media-king.png) center center;
-  background-size: cover;
-}
-.project-wrap .lala_mockup {
-  background: url(../img/publishing/media-lalasweet.png) center center;
-  background-size: cover;
+@media (max-width: 600px) {
+  .project-wrap #project_sec1 .tab-content .pubbox {
+    padding: 16px;
+    gap: 16px;
+  }
+  .project-wrap #project_sec1 .tab-content .pubbox .publeft .pub_img {
+    width: 100%;
+    border-radius: 8px;
+  }
 }
 .project-wrap .pub_color1 {
   background-color: #31ceee;

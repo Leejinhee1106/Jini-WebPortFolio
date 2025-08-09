@@ -54,52 +54,61 @@ header {
     box-sizing: border-box;
     .pro_sec {
         margin-bottom: 100px;
-        scroll-margin-top: 120px; // header height + 여유
+        scroll-margin-top: 120px; 
     }
     .pro_title{
         font-size: 32px;
         margin-bottom: 20px;
     }
-    #project_sec1{
-        width: 100%;
-        margin-top: 50px; // 네비랑 윗선 맞춤
+
+    #project_sec1 {
+    width: 100%;
+    margin-top: 50px; // 네비랑 윗선 맞춤
+
         .tab-menu {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center; // ⭐️ 가운데 정렬!
+            justify-content: center;
             list-style: none;
             padding: 0;
             margin: 20px 0;
             gap: 10px;
+
             li {
-                color: #333;
-                padding: 6px 16px;
-                cursor: pointer;
-                font-weight: bold;
-                transition: all 0.3s ease;
+            color: #333;
+            padding: 6px 16px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: clamp(14px, 1.4vw, 16px);
+            transition: all 0.3s ease;
+
                 &.active {
-                background-color: rgba(106, 138, 111, .7);
-                font-weight: lighter;
-                color: #fff;
-                border-radius: 5px;
+                    background-color: rgba(106, 138, 111, 0.7);
+                    font-weight: 500;
+                    color: #fff;
+                    border-radius: 5px;
                 }
             }
         }
+
         .tab-content {
             .tab-panel {
                 display: none;
-                &.active {
-                display: block;
-                }
+                &.active { display: block;}
             }
+
             .pubbox {
                 width: 100%;
                 height: 400px;
                 display: flex;
                 justify-content: space-around;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
                 box-sizing: border-box;
                 border: 1px solid #CBE0B9;
                 border-radius: 20px;
+
                 .publeft {
                     width: 45%;
                     height: 100%;
@@ -107,36 +116,77 @@ header {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+
                     .pub_img {
-                        width: 500px;
-                        height: 300px;
-                        // 이미지 아래 한번에 첨부
+                        width: min(500px, 90%);
+                        aspect-ratio: 16 / 9; 
+                        background: #eee;    
+                        border-radius: 10px;
                     }
+                    //목업이미지 모음
+                    .an_mockup {
+                        background: url(../img/publishing/media-antenna.png) center center;
+                        background-size: cover;
+                    }
+                    .mea_mockup {
+                        background: url(../img/publishing/media-medream.png) center center;
+                        background-size: cover;
+                    }
+                    .bm_mockup {
+                        background: url(../img/publishing/media-bm.png) center center;
+                        background-size: cover;
+                    }
+                    .ju_mockup {
+                        background: url(../img/publishing/media-juicy.png) center center;
+                        background-size: cover;
+                    }
+                    .king_mockup {
+                        background: url(../img/publishing/media-king.png) center center;
+                        background-size: cover;
+                    }
+                    .lala_mockup {
+                        background: url(../img/publishing/media-lalasweet.png) center center;
+                        background-size: cover;
+                    }
+
                     .pub_textbox {
                         text-align: center;
+                        margin-top: 10px;
+
                         .pub_title {
-                            font-size: 20px;
+                            font-size: clamp(18px, 2vw, 20px);
                             color: #222;
+                            line-height: 1.3;
                         }
-                        .pub_subtext {font-size: 16px;}
+                        .pub_subtext {
+                            font-size: clamp(14px, 1.6vw, 16px);
+                            color: #555;
+                        }
                     }
                 }
+
                 .pubright {
                     width: 45%;
                     height: 100%;
                     box-sizing: border-box;
+
                     .pubr_text {
                         height: 100%;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         gap: 20px;
+
                         .pubr_concept {
-                            font-size: 24px;
+                            font-size: clamp(18px, 2.2vw, 24px);
                             letter-spacing: 1.5px;
                             color: #182e1a;
                         }
-                        .pubr_fc {                           
+
+                        .pubr_fc {
+                            font-size: clamp(14px, 1.6vw, 16px);
+                            color: #333;
+
                             .pub_color {
                                 display: inline-block;
                                 width: 15px;
@@ -145,52 +195,76 @@ header {
                                 margin-left: 5px;
                             }
                         }
-                        .pubr_desc a {
-                            font-size: 24px;
-                            color: #182e1a;
-                            text-align: center;
+
+                        .pubr_desc {
+                            font-size: clamp(14px, 1.6vw, 16px);
+                            color: #333;
+
+                            &.text-gray { color: #7c7c7c; }
+
+                            a {
+                                font-size: clamp(16px, 2vw, 24px);
+                                color: #182e1a;
+                                text-align: center;
+                                transition: color .2s;
+                                &:hover { color: #6A8A6F; }
+                            }
                         }
-                         .pubr_desc a:hover {
-                            color: #6A8A6F;
-                         }
-                        .text-gray {color: #7c7c7c;}
+
                         .site-link {
                             display: flex;
                             flex-direction: row;
                             align-items: center;
                             justify-content: space-between;
-                            > .github img {width: 50px; height: 50px;}
+                            gap: 12px;
+
+                            > .github img { width: 50px; height: 50px; }
                         }
                     }
                 }
             }
-        }    
+        }
+
+        /* 섹션1 반응형 */
+        @media (max-width: 1024px) {
+            .tab-content .pubbox {
+                height: auto;
+                flex-direction: column;         
+                align-items: center;        
+                text-align: center;
+
+                .publeft,
+                .pubright {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .pubright .pubr_text {
+                    align-items: center;       
+                }
+
+                .site-link {
+                    justify-content: center;
+                    gap: 16px;
+                }
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .tab-content .pubbox {
+                padding: 16px;
+                gap: 16px;
+
+                .publeft .pub_img {
+                    width: 100%;
+                    border-radius: 8px;
+                }
+            }
+        }
     }
-    //목업이미지 모음
-    .an_mockup {
-        background: url(../img/publishing/media-antenna.png) center center;
-        background-size: cover;
-    }
-    .mea_mockup {
-        background: url(../img/publishing/media-medream.png) center center;
-        background-size: cover;
-    }
-    .bm_mockup {
-        background: url(../img/publishing/media-bm.png) center center;
-        background-size: cover;
-    }
-    .ju_mockup {
-        background: url(../img/publishing/media-juicy.png) center center;
-        background-size: cover;
-    }
-    .king_mockup {
-        background: url(../img/publishing/media-king.png) center center;
-        background-size: cover;
-    }
-    .lala_mockup {
-        background: url(../img/publishing/media-lalasweet.png) center center;
-        background-size: cover;
-    }
+
+   
     // 포인트 컬러코드 모음
     .pub_color1 {background-color: #31ceee;} //안테나
     .pub_color2 {background-color: #8a75b8;} //미드림
@@ -202,8 +276,18 @@ header {
     .pub_color8 {background-color: #016ED5;} //라라스윗
 
 
-
-
+    // 섹션1 미디어
+    // @media (max-width:1024px) {
+    //     .pubbox {
+    //         flex-direction: column;
+    //         .publeft {
+    //             width: 100% !important;
+    //         }
+    //         .pubright {
+    //             width: 100% !important;
+    //         }
+    //     }
+    // }
 
 
 
