@@ -3,11 +3,6 @@ const cardSwiper = new Swiper('.card-swiper', {
   spaceBetween: 20,
   speed: 600,
 
-  navigation: {
-    nextEl: '.card-button-next',
-    prevEl: '.card-button-prev',
-  },
-
   breakpoints: {
     0: { slidesPerView: 1, slidesPerGroup: 1, loopAdditionalSlides: 2 },
     768: { slidesPerView: 2, slidesPerGroup: 2, loopAdditionalSlides: 4 },
